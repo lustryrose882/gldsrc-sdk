@@ -179,7 +179,7 @@ public:
 	DECLARE_MESSAGE_FUNC(SecAmmoVal);
 	DECLARE_MESSAGE_FUNC(SecAmmoIcon);
 
-private:
+public:
 	enum
 	{
 		MAX_SEC_AMMO_VALUES = 4
@@ -202,7 +202,7 @@ public:
 	virtual int Draw(float flTime);
 	DECLARE_MESSAGE_FUNC(Geiger);
 
-private:
+public:
 	int m_iGeigerRange;
 };
 
@@ -214,7 +214,7 @@ public:
 	virtual int Draw(float flTime);
 	DECLARE_MESSAGE_FUNC(Train);
 
-private:
+public:
 	HSPRITE m_hSprite;
 	int m_iPos;
 };
@@ -299,7 +299,7 @@ public:
 	int GetDeathNoticeY();
 	DECLARE_MESSAGE_FUNC(DeathMsg);
 
-private:
+public:
 	int m_HUD_d_skull;			// sprite index of skull icon
 	int m_iDeathNoticeGap;
 	int m_iDeathNoticeTop;
@@ -343,10 +343,9 @@ public:
 
 	DECLARE_MESSAGE_FUNC(SendAudio);
 
+public:
 	friend class CHudSpectator;
 	struct cvar_s *m_HUD_saytext;
-
-private:
 	struct cvar_s *m_HUD_saytext_time;
 };
 
@@ -363,7 +362,7 @@ public:
 	int GetArmorPercent() const;
 	bool HasHelmet() const;
 
-private:
+public:
 	int m_HUD_suit_empty;
 	int m_HUD_suit_full;
 	int m_HUD_suithelmet_empty;
@@ -383,7 +382,7 @@ public:
 	DECLARE_MESSAGE_FUNC(Flashlight);
 	DECLARE_MESSAGE_FUNC(FlashBat);
 
-private:
+public:
 	HSPRITE m_hSprite1;
 	HSPRITE m_hSprite2;
 	HSPRITE m_hBeam;
@@ -462,7 +461,7 @@ public:
 	void MessageScanStart();
 	void MessageScanNextChar(vgui2::HFont font);
 
-private:
+public:
 	client_message_t		m_Messages[maxHUDMessages];
 	float					m_startTime[maxHUDMessages];
 	message_parms_t			m_parms;
@@ -496,7 +495,7 @@ public:
 	void DisableIcon(char *pszIconName);
 	bool InBuyZone() const;
 
-private:
+public:
 	int m_iCrossWidth;
 	int m_bFlashOn;
 	float m_tmNextFlash;
@@ -527,7 +526,7 @@ public:
 	int m_iAccount;
 	int GetBalance() const;
 
-private:
+public:
 	int m_HUD_dollar;
 	int m_HUD_minus;
 	int m_HUD_plus;
@@ -553,6 +552,7 @@ public:
 	DECLARE_USERCMD_FUNC(NVGAdjustUp);
 	DECLARE_USERCMD_FUNC(NVGAdjustDown);
 
+public:
 	int m_fOn;
 	int m_iAlpha;
 	int m_iScopeTextureID;
@@ -568,7 +568,7 @@ public:
 
 	DECLARE_MESSAGE_FUNC(Scenario);
 
-private:
+public:
 	HSPRITE m_hSprite;
 	wrect_t m_rect;
 	int m_alpha;
@@ -588,7 +588,7 @@ public:
 	virtual int Draw(float flTime);
 	virtual void Reset();
 
-private:
+public:
 	int m_iScopeTextureID;
 	int m_iScopeNWTextureID, m_iScopeNETextureID, m_iScopeSWTextureID, m_iScopeSETextureID;
 };
@@ -613,7 +613,7 @@ public:
 	int GetHudFontHeight();
 	void GetStringSize(const wchar_t *string, int *width, int *height);
 
-private:
+public:
 	vgui2::HFont m_hudfont;
 	float m_flVGUI2StringTime;
 	wchar_t m_wCharBuf[512];

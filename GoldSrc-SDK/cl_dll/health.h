@@ -137,8 +137,6 @@ public:
 	int m_iPlayerLastPointedAt;
 	int m_iPlayerNum;
 	bool m_bDrawRadar;
-
-private:
 	HSPRITE m_hSprite;
 	HSPRITE m_hDamage;
 	wrect_t *m_hrad;
@@ -161,9 +159,8 @@ public:
 
 	int GetClosestRight() const { return m_closestRight; }
 
+public:
 	float m_flTimeEnd;
-
-private:
 	int m_HUD_stopwatch;
 	float m_fFade;
 	float m_flNewPeriod;
@@ -183,7 +180,7 @@ public:
 	DECLARE_MESSAGE_FUNC(BarTime);
 	DECLARE_MESSAGE_FUNC(BarTime2);
 
-private:
+public:
 	float m_tmEnd;
 	float m_tmStart;
 	float m_tmNewPeriod;
@@ -206,9 +203,8 @@ public:
 
 	DECLARE_MESSAGE_FUNC(TaskTime);
 
+public:
 	float m_flTimeEnd;
-
-private:
 	int m_HUD_stopwatch;
 	float m_fFade;
 	float m_flNewPeriod;

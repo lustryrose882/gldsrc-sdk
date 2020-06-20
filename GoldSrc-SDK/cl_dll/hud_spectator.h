@@ -131,7 +131,6 @@ public:
 	vec3_t m_cameraAngles;					// and it's angles
 	CInterpolation m_WayInterpolation;
 
-private:
 	vec3_t m_vPlayerPos[64];
 	HSPRITE	m_hsprPlayerBlue;
 	HSPRITE	m_hsprPlayerRed;
