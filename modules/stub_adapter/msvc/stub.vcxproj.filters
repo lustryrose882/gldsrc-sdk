@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{c2d7f216-b3fb-4236-88ff-2c890bf99292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK">
+      <UniqueIdentifier>{cc3b967b-a7c9-41d3-925c-ee65ba19846c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK\common">
+      <UniqueIdentifier>{da05f5fd-9680-49e8-8b9e-4cde561f1041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK\tier1">
+      <UniqueIdentifier>{214c6414-c888-471f-b95d-192e3065d5ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK\tier0">
+      <UniqueIdentifier>{6c66a8a7-a3c9-465e-bd82-bb972cb1d103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK\steam">
+      <UniqueIdentifier>{2aa1d2ba-63b7-47ee-a17a-ff50e4e93476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK\plugmod">
+      <UniqueIdentifier>{d21b759c-5182-4e6a-94cd-7af95ad092a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK\net">
+      <UniqueIdentifier>{29efc256-6d60-4a68-8d62-3a1d8a538a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoldSrc-SDK\engine">
+      <UniqueIdentifier>{6c3fdd25-8b75-4ee9-b052-ce9e9d3fe825}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\common\netadr.cpp">
+      <Filter>GoldSrc-SDK\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\common\Sizebuf.cpp">
+      <Filter>GoldSrc-SDK\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier0\dbg.cpp">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier0\platform.cpp">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier0\platformtime.cpp">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_crc.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_md5.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\interface.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\utlsymbol.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\utlbuffer.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\characterset.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\plugmod_api.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\steam\steamid.cpp">
+      <Filter>GoldSrc-SDK\steam</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_rijndael.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha1.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha2.cpp">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\steam\steamappid.cpp">
+      <Filter>GoldSrc-SDK\steam</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\net\BitBuffer.cpp">
+      <Filter>GoldSrc-SDK\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\filesystem.cpp">
+      <Filter>GoldSrc-SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\common\parsemsg.cpp">
+      <Filter>GoldSrc-SDK\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\common\netadr.h">
+      <Filter>GoldSrc-SDK\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\common\Sizebuf.h">
+      <Filter>GoldSrc-SDK\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\annotations.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\basetypes.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\commonmacros.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\dbg.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\dbgflag.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\platform.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\platformtime.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\wchartypes.h">
+      <Filter>GoldSrc-SDK\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_crc.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_md5.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\interface.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utldict.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utllinkedlist.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlmap.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlmemory.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlrbtree.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlsymbol.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlvector.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlbuffer.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\characterset.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\steam\steamid.h">
+      <Filter>GoldSrc-SDK\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\steam\steam_api.h">
+      <Filter>GoldSrc-SDK\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\callbacks.h">
+      <Filter>GoldSrc-SDK\plugmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\callbacks_defs.h">
+      <Filter>GoldSrc-SDK\plugmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\callresult.h">
+      <Filter>GoldSrc-SDK\plugmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\plugmod.h">
+      <Filter>GoldSrc-SDK\plugmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_rijndael.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha1.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha2.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utliterator.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlpair.h">
+      <Filter>GoldSrc-SDK\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\steam\steamappid.h">
+      <Filter>GoldSrc-SDK\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\net\BitBuffer.h">
+      <Filter>GoldSrc-SDK\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\filesystem.h">
+      <Filter>GoldSrc-SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\APIProxy.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\archtypes.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\bspfile.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\cdll_int.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\cdll_null.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\client.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\cmd.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\common.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\consistency.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\custom.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\customentity.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\d_local.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\delta_packet.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\edict.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\eiface.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\event.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\eventhook.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\iddraw.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\iengine.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\IEngineSurface.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\igame.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\info.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\inst_baseline.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\ivideomode.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\keydefs.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\keys.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\maintypes.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\model.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\modelgen.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\net.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\osconfig.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\progdefs.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\progs.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\shake.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\sizebuf.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\sound.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\spritegn.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\studio.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\svcmsg.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\userid.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\usermsg.h">
+      <Filter>GoldSrc-SDK\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\common\parsemsg.h">
+      <Filter>GoldSrc-SDK\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

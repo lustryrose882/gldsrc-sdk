@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\plugmod_api.cpp" />
+    <ClCompile Include="..\..\..\GoldSrc-SDK\common\netadr.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\common\parsemsg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\common\Sizebuf.cpp" />
+    <ClCompile Include="..\..\..\GoldSrc-SDK\filesystem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\net\BitBuffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\steam\steamappid.cpp" />
+    <ClCompile Include="..\..\..\GoldSrc-SDK\steam\steamid.cpp" />
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier0\dbg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier0\platform.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier0\platformtime.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\characterset.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_crc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_md5.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_rijndael.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\interface.cpp" />
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\utlbuffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GoldSrc-SDK\tier1\utlsymbol.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\common\netadr.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\common\parsemsg.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\common\Sizebuf.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\APIProxy.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\archtypes.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\bspfile.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\cdll_int.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\cdll_null.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\client.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\cmd.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\common.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\consistency.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\custom.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\customentity.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\delta_packet.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\d_local.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\edict.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\eiface.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\event.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\eventhook.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\iddraw.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\iengine.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\IEngineSurface.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\igame.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\info.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\inst_baseline.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\ivideomode.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\keydefs.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\keys.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\maintypes.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\model.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\modelgen.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\net.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\osconfig.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\progdefs.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\progs.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\shake.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\sizebuf.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\sound.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\spritegn.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\studio.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\svcmsg.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\userid.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\engine\usermsg.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\filesystem.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\net\BitBuffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\callbacks.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\callbacks_defs.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\callresult.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\plugmod\plugmod.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\steam\steamappid.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\steam\steamid.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\steam\steam_api.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\annotations.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\basetypes.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\commonmacros.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\dbg.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\dbgflag.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\platform.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\platformtime.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier0\wchartypes.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\characterset.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_crc.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_md5.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_rijndael.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\checksum_sha2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\interface.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlbuffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utldict.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utliterator.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utllinkedlist.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlmap.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlmemory.h" />
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlpair.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlrbtree.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlsymbol.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GoldSrc-SDK\tier1\utlvector.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CE21DCA3-9D29-4EB5-873E-C942A36441D2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>stub</ProjectName>
+    <RootNamespace>stub</RootNamespace>
+    <XPDeprecationWarning>false</XPDeprecationWarning>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '16.0'">v140_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '16.0'">v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;STATIC_TIER0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src;$(ProjectDir)..\..\..\GoldSrc-SDK;$(ProjectDir)..\..\..\GoldSrc-SDK\common;$(ProjectDir)..\..\..\GoldSrc-SDK\engine;$(ProjectDir)..\..\..\GoldSrc-SDK\pm_shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>steam_api.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CustomBuildStep>
+      <Command>echo Empty Action</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Force build to run Pre-Build event</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>build.always.run</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs>build.always.run</Inputs>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>IF EXIST "$(ProjectDir)PostBuild.bat" (CALL "$(ProjectDir)PostBuild.bat" "$(TargetDir)" "$(TargetName)" "$(TargetExt)" "$(ProjectDir)")</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Automatic deployment script</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;STATIC_TIER0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src;$(ProjectDir)..\..\..\GoldSrc-SDK;$(ProjectDir)..\..\..\GoldSrc-SDK\common;$(ProjectDir)..\..\..\GoldSrc-SDK\engine;$(ProjectDir)..\..\..\GoldSrc-SDK\pm_shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>steam_api.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CustomBuildStep>
+      <Command>echo Empty Action</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Force build to run Pre-Build event</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>build.always.run</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs>build.always.run</Inputs>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>IF EXIST "$(ProjectDir)PostBuild.bat" (CALL "$(ProjectDir)PostBuild.bat" "$(TargetDir)" "$(TargetName)" "$(TargetExt)" "$(ProjectDir)")</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Automatic deployment script</Message>
+    </PostBuildEvent>
+    <Manifest>
+      <AssemblyIdentity>
+      </AssemblyIdentity>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
