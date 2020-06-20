@@ -155,11 +155,6 @@ extern cldll_func_t cl_funcs;
 extern cl_enginefunc_t cl_engsrcProxies;
 extern cl_enginefunc_t cl_enginefuncs;
 
-#ifdef HOOK_ENGINE
-#define g_engdstAddrs (*pg_engdstAddrs)
-#define g_module (*pg_module)
-#endif
-
 extern cl_enginefunc_dst_t g_engdstAddrs;
 extern module_t g_module;
 
@@ -522,30 +517,6 @@ CL_DLLEXPORT void *ClientFactory();
 #ifdef __cplusplus
 }
 #endif
-
-#if defined(CLIENT_CORE) || defined(CLIENT_DLL)
-extern int g_iPlayerClass;
-extern int g_iTeamNumber;
-extern int g_iUser1;
-extern int g_iUser2;
-extern int g_iUser3;
-extern cvar_t *pcvar_developer;
-extern cvar_t *pcvar_con_color;
-const char *g_sPlayerModelFiles[];
-extern bool g_bUnassigned;
-
-#ifdef HOOK_ENGINE
-#define engine_studio_api (*pengine_studio_api)
-#define _studio (*pstudio)
-#endif
-
-extern engine_studio_api_t engine_studio_api;
-extern r_studio_interface_t _studio;
-
-void *WINAPI _GetProcAddress(HMODULE hModule, LPCSTR lpProcName);
-void Cvar_DirectSet(cvar_t *var, const char *value);
-void Cvar_DirectSet_Internal(cvar_t *var, const char *value);
-#endif // #if defined(CLIENT_CORE) || defined(CLIENT_DLL)
 
 qboolean LoadSecureClient(const char *pszDllName);
 void LoadInsecureClient(const char *pszFullPathClientDLLName);
