@@ -159,8 +159,6 @@ protected:
 		EXTERNAL_CONST_BUFFER_MARKER = -2,
 	};
 
-	uint32_t m_unSizeOfElements = 0; // TODO: Need remove on release
-
 	void *m_pMemory;
 	int m_nAllocationCount;
 	int m_nGrowSize;
