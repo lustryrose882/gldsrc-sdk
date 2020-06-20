@@ -24,7 +24,7 @@ using UtlSymId_t = unsigned short;
 
 const int MAX_STRING_POOL_SIZE = 256;
 const UtlSymId_t UTL_INVAL_SYMBOL = ((UtlSymId_t)~0);
-const unsigned int UTL_INVALID_STRING_INDEX = -1;
+const unsigned int UTL_INVALID_STRING_INDEX = ((unsigned int)~0);
 
 struct LessCtx_t
 {
