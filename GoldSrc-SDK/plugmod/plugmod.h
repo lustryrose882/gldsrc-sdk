@@ -98,19 +98,19 @@ public:
 	}
 
 	template <typename T>
-	bool RegisterCallback(const char *pszName)
+	bool CreateCallback(const char *pszName)
 	{
-		return RegisterCallback(pszName, T::k_iCallback);
+		return CreateCallback(pszName, T::k_iCallback);
 	}
 
 	template <typename T>
-	bool UnRegisterCallback(const char *pszName)
+	bool RemoveCallback(const char *pszName)
 	{
-		return UnRegisterCallback(pszName, T::k_iCallback);
+		return RemoveCallback(pszName, T::k_iCallback);
 	}
 
-	virtual bool RegisterCallback(const char *pszEventName, int iCallback) = 0;
-	virtual bool UnRegisterCallback(const char *pszEventName, int iCallback) = 0;
+	virtual bool CreateCallback(const char *pszEventName, int iCallback) = 0;
+	virtual bool RemoveCallback(const char *pszEventName, int iCallback) = 0;
 
 protected:
 	// Callback virtual methods, you shouldn't be use directly, use only templates above

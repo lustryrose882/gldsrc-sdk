@@ -172,7 +172,7 @@ void CStubPlugin::PreInit(plugmod_funcs_t *plmFuncs)
 
 	// Example callback manager
 	// Create custom callback for my pool of plugins
-	m_pICallbackMgr->RegisterCallback<StubPluginCallbackSignaled_t>("OnStubPluginCallbackSignaled");
+	m_pICallbackMgr->CreateCallback<StubPluginCallbackSignaled_t>("OnStubPluginCallbackSignaled");
 
 	//
 	// Another plugin as listener can itself hook this callback id

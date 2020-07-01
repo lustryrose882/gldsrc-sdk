@@ -25,20 +25,19 @@
 	#pragma warning(disable:4100) // 'identifier' : unreferenced formal parameter
 #endif
 
-template <class T>
 class CUtlMemoryAllocator
 {
 protected:
-	inline T *Alloc(int nInitSize)
+	inline void *Alloc(int nInitSize)
 	{
 		void *block = malloc(nInitSize);
 		memset(block, 0, nInitSize);
-		return (T *)block;
+		return block;
 	}
 
-	inline T *Realloc(void *pMemory, int Size)
+	inline void *Realloc(void *pMemory, int Size)
 	{
-		return (T *)realloc(pMemory, Size);
+		return realloc(pMemory, Size);
 	}
 
 	inline void Free(void *pMemory)
@@ -49,7 +48,7 @@ protected:
 
 // The CUtlMemory class:
 // A growable memory class which doubles in size by default
-template <class T, class I = int, class A = CUtlMemoryAllocator<T>>
+template <class T, class I = int, class A = CUtlMemoryAllocator>
 class CUtlMemory: public A
 {
 public:
@@ -169,7 +168,7 @@ protected:
 template <class T, size_t SIZE, class I = int>
 class CUtlMemoryFixedGrowable: public CUtlMemory<T, I>
 {
-	typedef CUtlMemory<T, I> BaseClass;
+	using BaseClass = CUtlMemory<T, I>;
 
 public:
 	CUtlMemoryFixedGrowable(int nGrowSize = 0, int nInitSize = SIZE) :
@@ -295,7 +294,7 @@ CUtlMemory<T, I, A>::CUtlMemory(int nGrowSize, int nInitAllocationCount) :
 
 	if (m_nAllocationCount)
 	{
-		m_pMemory = Alloc(m_nAllocationCount * sizeof(T));
+		m_pMemory = A::Alloc(m_nAllocationCount * sizeof(T));
 	}
 }
 
@@ -378,7 +377,7 @@ void CUtlMemory<T, I, A>::Init(int nGrowSize, int nInitSize)
 
 	if (m_nAllocationCount)
 	{
-		m_pMemory = Alloc(m_nAllocationCount * sizeof(T));
+		m_pMemory = A::Alloc(m_nAllocationCount * sizeof(T));
 	}
 }
 
@@ -402,7 +401,7 @@ void CUtlMemory<T, I, A>::ConvertToGrowableMemory(int nGrowSize)
 	if (m_nAllocationCount)
 	{
 		int nNumBytes = m_nAllocationCount * sizeof(T);
-		void *pMemory = Alloc(nNumBytes);
+		void *pMemory = A::Alloc(nNumBytes);
 		memcpy(pMemory, m_pMemory, nNumBytes);
 		m_pMemory = pMemory;
 	}
@@ -657,12 +656,12 @@ void CUtlMemory<T, I, A>::Grow(int num)
 
 	if (m_pMemory && needToReallocate)
 	{
-		m_pMemory = Realloc(m_pMemory, m_nAllocationCount * sizeof(T));
+		m_pMemory = A::Realloc(m_pMemory, m_nAllocationCount * sizeof(T));
 		Assert(m_pMemory);
 	}
 	else if (!m_pMemory)
 	{
-		m_pMemory = Alloc(m_nAllocationCount * sizeof(T));
+		m_pMemory = A::Alloc(m_nAllocationCount * sizeof(T));
 		Assert(m_pMemory);
 	}
 	else
@@ -689,11 +688,11 @@ inline void CUtlMemory<T, I, A>::EnsureCapacity(int num)
 
 	if (m_pMemory)
 	{
-		m_pMemory = Realloc(m_pMemory, m_nAllocationCount * sizeof(T));
+		m_pMemory = A::Realloc(m_pMemory, m_nAllocationCount * sizeof(T));
 	}
 	else
 	{
-		m_pMemory = Alloc(m_nAllocationCount * sizeof(T));
+		m_pMemory = A::Alloc(m_nAllocationCount * sizeof(T));
 	}
 }
 
@@ -705,7 +704,7 @@ void CUtlMemory<T, I, A>::Purge()
 	{
 		if (m_pMemory)
 		{
-			Free((void *)m_pMemory);
+			A::Free(m_pMemory);
 			m_pMemory = NULL;
 		}
 
@@ -756,7 +755,7 @@ void CUtlMemory<T, I, A>::Purge(int numElements, bool bRealloc)
 		m_nAllocationCount = numElements;
 
 		// Allocation count > 0, shrink it down
-		m_pMemory = Realloc(m_pMemory, m_nAllocationCount * sizeof(T));
+		m_pMemory = A::Realloc(m_pMemory, m_nAllocationCount * sizeof(T));
 	}
 	else
 	{
@@ -972,7 +971,6 @@ void CUtlMemoryAligned<T, nAlignment>::Purge()
 
 // Shared allocation
 // Implements virtual methods for use external
-template <class T>
 class CUtlMemoryAllocatorShared
 {
 public:
@@ -997,14 +995,14 @@ protected:
 		m_Free		= free;
 	}
 
-	virtual T *Alloc(int nInitSize)
+	virtual void *Alloc(int nInitSize)
 	{
-		return (T *)m_Alloc(nInitSize);
+		return m_Alloc(nInitSize);
 	}
 
-	virtual T *Realloc(void *pMemory, int Size)
+	virtual void *Realloc(void *pMemory, int Size)
 	{
-		return (T *)m_Realloc(pMemory, Size);
+		return m_Realloc(pMemory, Size);
 	}
 
 	virtual void Free(void *pMemory)
@@ -1019,19 +1017,19 @@ private:
 };
 
 template <class T, class I = int>
-class CUtlMemoryShared: public CUtlMemory<T, I, CUtlMemoryAllocatorShared<T>>
+class CUtlMemoryShared: public CUtlMemory<T, I, CUtlMemoryAllocatorShared>
 {
 public:
-	typedef CUtlMemoryAllocatorShared<T> CAllocator;
+	using CAllocator = CUtlMemoryAllocatorShared;
 
 	// constructors
 	CUtlMemoryShared(int nGrowSize = 0, int nInitSize = 0) :
-		CUtlMemory(nGrowSize, nInitSize)
+		CUtlMemory<T, I, CAllocator>(nGrowSize, nInitSize)
 	{
 	}
 
 	CUtlMemoryShared(T *pMemory, int numElements) :
-		CUtlMemory(pMemory, numElements)
+		CUtlMemory<T, I, CAllocator>(pMemory, numElements)
 	{
 	}
 };

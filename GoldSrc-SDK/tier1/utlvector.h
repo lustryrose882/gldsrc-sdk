@@ -1291,12 +1291,12 @@ class CUtlVectorShared: public CUtlVector<T, A>
 public:
 	// constructors
 	CUtlVectorShared(int growSize = 0, int initSize = 0) :
-		CUtlVector(growSize, initSize)
+		CUtlVector<T, A>(growSize, initSize)
 	{
 	}
 
 	CUtlVectorShared(T *pMemory, int numElements) :
-		CUtlVector(pMemory, numElements)
+		CUtlVector<T, A>(pMemory, numElements)
 	{
 	}
 
@@ -1307,7 +1307,7 @@ public:
 	// internal leak tracking should be used in debug
 	void SetMemFunctions(alloc_t _pfnalloc, realloc_t _pfnrealloc, free_t _pfnfree)
 	{
-		m_Memory.SetMemFunctions(_pfnalloc, _pfnrealloc, _pfnfree);
+		CUtlVector<T, A>::m_Memory.SetMemFunctions(_pfnalloc, _pfnrealloc, _pfnfree);
 	}
 
 	virtual void ShiftElementsRight(int elem, int num)
